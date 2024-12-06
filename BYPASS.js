@@ -2852,8 +2852,8 @@ const jalist = [
  "f15797a734d0b4f171a86fd35c9a5e43"
 ];
 const tips1 =[
- "use premium proxy will get more request/s",
- "this script only work on http/2!",
+ "Proxies never updated!",
+ "This script modded by imscruz",
  ];
 
   site = [
@@ -2943,7 +2943,7 @@ const rateHeaders2 = [
     console.log(`Time: `.brightYellow + process.argv[3])
     console.log(`Rate: `.brightYellow + process.argv[4])
     console.log(`Thread: `.brightYellow + process.argv[5])
-    console.log(`ProxyFile: `.brightYellow + process.argv[6])
+    console.log(`Proxys: `.brightYellow + process.argv[6])
     console.log(`--------------------------------------------`.gray)
     console.log(`Note: `.brightCyan + tipsz)
     for (let counter = 1; counter <= args.threads; counter++) {
