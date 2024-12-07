@@ -6,21 +6,12 @@ import requests
 import random
 import getpass
 import time
-
+from pystyle import Colors, Colorate
 def install_packages(): # MODULES...
     print("Installing Python packages from requirements.txt...")
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'])
-    print("Installing npm packages from node_modules/package.json...")
-    subprocess.check_call(['npm', 'install', 'node_modules/package.json'])
-    print("Installing npm packages from socks/package.json...")
-    subprocess.check_call(['npm', 'install', 'socks/package.json'])
-    for root, dirs, files in os.walk('.'):
-        if 'package.json' in files:
-            print(f"NODE MODULES... {os.path.join(root, 'package.json')}...")
-            subprocess.check_call(['npm', 'install', os.path.join(root, 'package.json')])
 install_packages()
-
-from pystyle import Colors, Colorateimport os
+time.sleep(0.2)
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
