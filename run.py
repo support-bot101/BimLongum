@@ -1,13 +1,26 @@
+import subprocess
+import sys
 import socket
 import os
 import requests
 import random
 import getpass
 import time
-import sys
-import platform
-from pystyle import Colors, Colorate
 
+def install_packages(): # MODULES...
+    print("Installing Python packages from requirements.txt...")
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'])
+    print("Installing npm packages from node_modules/package.json...")
+    subprocess.check_call(['npm', 'install', 'node_modules/package.json'])
+    print("Installing npm packages from socks/package.json...")
+    subprocess.check_call(['npm', 'install', 'socks/package.json'])
+    for root, dirs, files in os.walk('.'):
+        if 'package.json' in files:
+            print(f"NODE MODULES... {os.path.join(root, 'package.json')}...")
+            subprocess.check_call(['npm', 'install', os.path.join(root, 'package.json')])
+install_packages()
+
+from pystyle import Colors, Colorateimport os
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -17,7 +30,7 @@ bots = len(proxys)
 bots_str = str(bots)
 
 def si():
-    print(Colorate.Diagonal(Colors.red_to_white, "GOODLUCK | USER: imscruz | PLAN :: 99 | Proxy: " + bots_str + " | kys"))
+    print(Colorate.Diagonal(Colors.red_to_white, "GOODLUCK | USER: imscruz | PLAN :: FREE! | Proxy: " + bots_str + " | kys"))
     print("")
   
 def layer7():
