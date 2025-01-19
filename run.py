@@ -7,12 +7,6 @@ import random
 import getpass
 import time
 from pystyle import Colors, Colorate
-def install_packages(): # MODULES...
-    print("Installing Python packages from requirements.txt...")
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'])
-install_packages()
-time.sleep(0.2)
-
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
     
