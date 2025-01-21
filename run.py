@@ -28,9 +28,9 @@ def layer7():
 ██║  ██ ██║██║╚██╔╝██║
 ██████╗ ██║██║ ╚═╝ ██║   
  ╚═════╝╚═╝╚═╝     ╚═╝  
-v0.0.5
+v0.1.0
 
-            No Ones Here
+            "don't be afraid"
         
                 Layer7 LIST
            
@@ -40,12 +40,15 @@ v0.0.5
 
 HOW WORK
 !CRASH https://example.com 60
+or
+!BYPASS https:example.com 60 to use a proxy list
+type "editp" to edit the Proxy list
 '''))
 
 def menu():
     clear()
     print(Colorate.Diagonal(Colors.red_to_white
-   , "G00DLU$k | USER: imscruz| PLAN :: FREE! | Proxy: " + bots_str + " | WORKING NOW "))
+   , "dont be afraid| USER: anonymous| PLAN :: FREE! | Proxy: " + bots_str + " | WORKING NOW "))
     print("")
     banner = '''
 ██████╗ ██╗███╗   ███╗
@@ -54,11 +57,11 @@ def menu():
 ██║  ██ ██║██║╚██╔╝██║
 ██████╗ ██║██║ ╚═╝ ██║   
  ╚═════╝╚═╝╚═╝     ╚═╝ 
-v0.0.5
+v0.1.0
 
-MADE BY imscruz !
+MADE BY ~ encypt ~
 
-TRY "HELP"! 
+list of commands type "HELP"
 '''
     print(Colorate.Diagonal(Colors.red_to_white, banner))
 def main():
@@ -79,7 +82,8 @@ def main():
             except IndexError:
                 print('Usage: METHOD URL TIME');
                 print('Example: METHOD URL TIME');
-    
+        elif "editp" in cnc
+            os.system("nano proxy.txt")
         elif "BYPASS" in cnc:
             try: 
                 host = cnc.split()[1]
@@ -90,14 +94,14 @@ def main():
                 print('Usage: METHOD URL TIME');
                 print('Example: METHOD URL TIME');
 
-        elif "imscruz" in cnc:
+        elif "root" in cnc:
             try: 
                 print("ARE YOU TRYING TO GET ROOT? GET LOST!")
                 os.system(f'python3 socks/typings_.py')
             except IndexError:
                 print('DONT!');
                 print('DO NOT USE THAT');
-
+   
         elif "help" in cnc:
             print(Colorate.Horizontal(Colors.red_to_white, ''' 
 LAYER7 - TO SEE ALL LAYER7 LIST
@@ -114,16 +118,5 @@ CLEAR - SOME CLEANING!
 
 def login():
     clear()
-    user = "imscruz"
-    passwd = "99"
-    username = input("</> Owner OF REP0: ")
-    password = getpass.getpass(prompt='</> 1N MY BI0: ')
-    if username != user or password != passwd:
-        print("dumb")
-        print("TRAIN YOUR BRAIN!")        
-        sys.exit(1)
-    elif username == user and password == passwd:
-        print("LOGINING...")
-        time.sleep(0.6)
-        main()
+    main()
 login()
